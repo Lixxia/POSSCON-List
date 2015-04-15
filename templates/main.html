@@ -1,0 +1,13 @@
+<div class="container">
+    <div ng-init="title = 'List App'"></div>
+    <h1>{{title}}</h1>
+    <a class="button button-primary" ui-sref="add">Add</a>
+    <input type="text" ng-model="thing.title" placeholder="Search">
+    <ul>
+      <li ng-repeat="thing in bucketlist | filter:thing">
+        <a ui-sref="show({ id: thing._id})">
+        {{thing.title}}
+        </a>
+      </li>
+    </ul>
+</div>

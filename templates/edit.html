@@ -1,0 +1,15 @@
+<div class="container">
+<h2>Edit</h2>
+  <form name="addForm" ng-submit="update(thing)">
+    <fieldset>
+      <label>Title</label>
+      <input class="u-full-width" type="text" ng-model="thing.title" required>
+    </fieldset>
+    <fieldset>
+      <label>Description</label>
+      <textarea class="u-full-width" ng-model="thing.description"></textarea>
+    </fieldset>
+    <button class="button-primary u-pull-right" ng-disabled="addForm.$invalid">Save</button>
+    <a class="button u-pull-right" ui-sref="main">Cancel</a>
+  </form>
+</div>
